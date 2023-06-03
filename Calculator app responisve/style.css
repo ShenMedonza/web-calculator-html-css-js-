@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+:root
+{
+    --background-color: rgba(245, 244, 244, 0.8);
+    --calculator-background: rgba(245, 244, 244, 0.8);
+    --calculator-boxshadow:8px 8px 5px  #000000;
+    --button-fontcolors:#000000;
+    --tetxbox-background:#000000;
+    --textbox-fontcolor:rgb(255, 255, 255);
+    --button-background:rgba(0, 0, 0, 0.2);
+    --visibility-sun:hidden;
+    --visibility-moon:visible;
+    --sun-top:0.5em;
+    --sun-right:0.5em;
+    --moon-top:0.5em;
+    --moon-left:0.5em;
+    --inside-boxshadow:4.5px 4.5px #1d1b1b;
+}
+
+body
+{
+    background: var(--background-color);
+}
+
+.toggle button
+{
+    border: none;
+    background: none;
+}
+
+.toggle .moon
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: var(--moon-top);
+    left: var(--moon-left);
+    visibility: var(--visibility-moon);
+}
+
+.toggle .sun
+{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: var(--sun-top);
+    right: var(--sun-right);
+    visibility: var(--visibility-sun);
+}
+
+.toggle .moon:hover
+{
+    transform: scale(0.9);
+}
+
+.toggle .sun:hover
+{
+    transform: scale(0.9);
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 2em 5em 5em;
+}
+
+.calculator
+{
+    background: var(--calculator-background); 
+    box-shadow: var(--calculator-boxshadow);
+    border-radius: 10px;
+}
+
+form input
+{
+    border: none;
+    color: var(--button-fontcolors);
+}
+
+form .text-box
+{
+    align-items: center;
+}
+
+form .text-box input
+{
+    background: var(--tetxbox-background);
+    color: var(--textbox-fontcolor);
+    width: 10rem;
+    height: 4rem;
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+form .inside
+{
+    margin: 10px;  
+}
+
+form .inside input
+{
+    min-width: 1.3em;
+    min-height: 1.3em;
+    margin: 3px;
+    padding: 5px 5px 5px;
+    /* From https://css.glass */
+    background: var(--button-background);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: url("icons8-3d-pointer-50.png");
+    box-shadow:var(--inside-boxshadow) ;
+}
+
+form .inside input:hover
+{
+    transform: scale(0.95);
+}
+
+form .equal
+{
+    width: 3em;
+}
+
+form .clear
+{
+    width: 3em;
+}
+
+
+.darkmode
+{
+    --background-color: rgba(0, 0, 0, 1);
+    --calculator-background:rgba(0, 0, 0, 1);
+    --calculator-boxshadow:8px 8px 5px  rgb(240, 220, 47);;
+    --button-fontcolors:#020202;
+    --tetxbox-background:rgb(240, 220, 47);;
+    --textbox-fontcolor:rgb(0, 0, 0);
+    --button-background:rgb(240, 220, 47);
+    --visibility-sun: visible;
+    --visibility-moon:hidden;
+    --inside-boxshadow:4.5px 4.5px rgb(131, 78, 0);
+}
